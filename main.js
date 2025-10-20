@@ -129,7 +129,7 @@ const renderList = (arr, el) => {
     i.id, i.name, i.price, i.image, i.category, i.hot, i.description
   ).render()).join('');
 };
-const fetchProducts = () => fetch('http://localhost:3000/products').then(r => r.json());
+const fetchProducts = () => fetch('https://my-json-server.typicode.com/dangducnhatkhoa/dev1/products/').then(r => r.json());
 
 // ====================== HEADER & FOOTER ====================== //
 document.addEventListener('DOMContentLoaded', () => {
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (detail) {
     const id = new URLSearchParams(location.search).get('id');
     if (id) {
-      fetch(`http://localhost:3000/products/${id}`)
+      fetch(`https://my-json-server.typicode.com/dangducnhatkhoa/dev1/products/${id}`)
         .then(r => r.json())
         .then(d => detail.innerHTML = new Product(
           d.id, d.name, d.price, d.image, d.category, d.hot, d.description
@@ -218,7 +218,7 @@ document.addEventListener('click', e => {
   if (e.target.classList.contains('buy-btn')) {
     const id = Number(e.target.dataset.id); // Fix: Convert sang Number để match db id
     if (!id) return; // Fix: Check id tồn tại
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`https://my-json-server.typicode.com/dangducnhatkhoa/dev1/products/${id}`)
       .then(r => {
         if (!r.ok) throw new Error('Product not found');
         return r.json();
