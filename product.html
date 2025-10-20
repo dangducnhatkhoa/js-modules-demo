@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách sản phẩm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+
+  <h1>Danh sách sản phẩm</h1>
+
+  <!-- Thanh tìm kiếm -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+  </div>
+
+  <!-- Sắp xếp -->
+  <div style="text-align:center; margin-bottom:20px;">
+    <select id="sort-price">
+      <option value="">Sắp xếp theo giá</option>
+      <option value="asc">Giá tăng dần</option>
+      <option value="desc">Giá giảm dần</option>
+    </select>
+  </div>
+
+  <!-- Danh sách sản phẩm -->
+  <div id="all-product" class="product-container"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
