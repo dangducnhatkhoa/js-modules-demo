@@ -129,10 +129,9 @@ const renderList = (arr, el) => {
     i.id, i.name, i.price, i.image, i.category, i.hot, i.description
   ).render()).join('');
 };
-const fetchProducts = () => 
-  fetch('https://my-json-server.typicode.com/dangducnhatkhoa/js-modules-demo/products')
-  .then(r => r.json());
-
+const fetchProducts = () =>
+  fetch('https://my-json-server.typicode.com/dangducnhatkhoa/js-modules-demo/products/')
+    .then(r => r.json());
 
 
 // ====================== HEADER & FOOTER ====================== //
